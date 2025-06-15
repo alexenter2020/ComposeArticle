@@ -10,12 +10,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -60,8 +58,10 @@ fun ArticlePreview() {
 @Composable
 fun ArticleImage(title: String, text1: String, text2: String, modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.bg_compose_background)
-    Column(modifier,
-        verticalArrangement = Arrangement.Top) {
+    Column(
+        modifier,
+        verticalArrangement = Arrangement.Top
+    ) {
         Image(
             painter = image,
             contentDescription = null
@@ -82,13 +82,5 @@ fun ArticleImage(title: String, text1: String, text2: String, modifier: Modifier
             textAlign = TextAlign.Justify
         )
     }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
 }
 
